@@ -1,0 +1,51 @@
+name: Release Theme
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Validate release metadata
+        id: metadata
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
+          import { readFileSync } from 'node:fs';
+          const theme = JSON.parse(readFileSync('komari-theme.json', 'utf8'));
+          if (!/^[A-Za-z0-9_-]+$/.test(theme.short)) throw new Error('Invalid theme short');
+          if (!/^\d+\.\d+\.\d+$/.test(theme.version)) throw new Error('Invalid version');
+          const tag = `v${theme.version}`;
+          if (process.env.GITHUB_REF_TYPE === 'tag' && process.env.GITHUB_REF_NAME !== tag) throw new Error('Version does not match tag');
+          console.log(`tag=${tag}`);
+          NODE
+      - run: pnpm exec eslint .
+      - run: pnpm run build
+      - name: Publish installable ZIP
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ steps.metadata.outputs.tag }}
+          name: Haruhi SOS ${{ steps.metadata.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: komari-theme-Haruhi-SOS-v*.zip
