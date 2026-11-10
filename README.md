@@ -53,6 +53,8 @@ pnpm run test:visual
 
 默认开发代理指向 `http://127.0.0.1:25774`。需要连接其他 Komari 实例时，可设置 `VITE_API_TARGET`。
 
+HTTP 与 WebSocket RPC 默认使用 `/api/rpc2`，无需额外 `.env` 文件。特殊部署可用 `VITE_API_BASE` 覆盖 API 前缀。
+
 ## 主题设置
 
 - `themeMode`：北京时间自动、明亮或夜间模式。
