@@ -7,7 +7,7 @@
     <meta name="description" content="凉宫春日 SOS 团风格的 Komari 监控主题。" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#8f1723" />
+    <meta name="theme-color" content="#bfe8ff" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -56,7 +56,7 @@
           var mode = localStorage.getItem('themeMode')
           var isDark = mode === 'dark'
 
-          if (mode !== 'dark' && mode !== 'light') {
+          if (mode === 'beijing') {
             var hour = Number(
               new Intl.DateTimeFormat('en-US', {
                 hour: '2-digit',

@@ -1,8 +1,8 @@
 {
   "name": "Haruhi SOS",
   "short": "haruhi-sos",
-  "description": "凉宫春日 SOS 团粉丝向 Komari 监控主题：团长袖章红、活动室纸张色、兔女郎凉宫春日响应式背景与系列曲目标签",
-  "version": "1.0.2",
+  "description": "凉宫春日 SOS 团青春校园祭主题：晴空蓝、暖白与团长红，透明磨砂服务器卡面、晴天兔女郎春日背景与系列曲目标签",
+  "version": "1.1.0",
   "author": "Bass",
   "url": "https://github.com/BassYes/komari-theme-Haruhi-SOS",
   "preview": "preview.png",
@@ -18,7 +18,7 @@
         "key": "themeMode",
         "name": "默认主题模式",
         "type": "select",
-        "default": "dark",
+        "default": "light",
         "options": "beijing,light,dark",
         "help": "beijing=北京时间 07:00-18:59 使用明亮模式、其余时间使用夜里模式；light=明亮模式；dark=夜里模式。前端右上角按钮可仅为当前浏览器临时切换。"
       },
@@ -147,14 +147,14 @@
         "type": "select",
         "default": "image",
         "options": "image,video",
-        "help": "image=彩蛋背景图片；video=静音循环背景视频。留空自定义地址时使用内置兔女郎凉宫春日夜间舞台图。"
+        "help": "image=彩蛋背景图片；video=静音循环背景视频。留空自定义地址时使用内置兔女郎凉宫春日晴天校园祭图。"
       },
       {
         "key": "gloriaHeroUrl",
         "name": "SOS 团彩蛋自定义素材",
         "type": "string",
         "default": "",
-        "help": "留空使用内置兔女郎凉宫春日夜间舞台图。可填写 HTTPS 地址或 local:相对路径；请确保拥有素材使用权。"
+        "help": "留空使用内置兔女郎凉宫春日晴天校园祭图。可填写 HTTPS 地址或 local:相对路径；请确保拥有素材使用权。"
       },
       {
         "key": "easterEyebrow",
@@ -218,7 +218,7 @@
         "type": "select",
         "default": "SOS团",
         "options": "翡翠,柔和,高对比,SOS团,自定义",
-        "help": "控制明亮与夜里两种模式的卡片透明度、文字和边框；当前主题推荐“SOS团”。预设名称不代表主题模式；选择“自定义”后读取下方 JSON。"
+        "help": "推荐“SOS团”：明亮模式约 52% 不透明度、夜间模式约 62%，低模糊磨砂透出背景。预设名称不代表主题模式；选择“自定义”可用下方 JSON 调整颜色与透明度。"
       },
       {
         "key": "colorVisionMode",
@@ -232,7 +232,7 @@
         "key": "glassCustomColors",
         "name": "自定义明亮/夜里玻璃 JSON",
         "type": "richtext",
-        "default": "{\"lightCard\":\"#fff8e7d6\",\"lightControl\":\"#f7edd1d9\",\"lightText\":\"#3b211f\",\"lightMutedText\":\"#77534d\",\"lightBorder\":\"#8f17234a\",\"darkCard\":\"#07101fd6\",\"darkControl\":\"#07101fe0\",\"darkText\":\"#fff8e7\",\"darkMutedText\":\"#e8d9b8\",\"darkBorder\":\"#e84a4f59\"}",
+        "default": "{\"lightCard\":\"#f7fcff85\",\"lightControl\":\"#f7fcffa6\",\"lightText\":\"#17364c\",\"lightMutedText\":\"#3a596d\",\"lightBorder\":\"#ffffffb3\",\"darkCard\":\"#24435f9e\",\"darkControl\":\"#24435fb3\",\"darkText\":\"#f7fcff\",\"darkMutedText\":\"#e0f0fa\",\"darkBorder\":\"#d6f2ff73\"}",
         "help": "light*=明亮模式，dark*=夜里模式；Card=卡片，Control=控制条，Text=主文字，MutedText=次文字，Border=边框。支持 #RRGGBB 和带透明度的 #RRGGBBAA。"
       },
       {
@@ -465,14 +465,14 @@
         "name": "明亮模式背景地址",
         "type": "string",
         "default": "",
-        "help": "留空使用内置兔女郎凉宫春日夕阳活动室图。支持 HTTPS 地址、站内 / 路径；持久本地文件放入 data/theme/user-assets/ 后填写 local:文件名。"
+        "help": "留空使用内置兔女郎凉宫春日晴天校园祭图。支持 HTTPS 地址、站内 / 路径；持久本地文件放入 data/theme/user-assets/ 后填写 local:文件名。"
       },
       {
         "key": "darkBackgroundUrl",
         "name": "夜里模式背景地址",
         "type": "string",
         "default": "",
-        "help": "留空使用内置兔女郎凉宫春日夜间舞台图。支持 HTTPS 地址、站内 / 路径；持久本地文件放入 data/theme/user-assets/ 后填写 local:文件名。"
+        "help": "留空使用内置晴天校园祭图，夜间仅轻微调暗。支持 HTTPS 地址、站内 / 路径；持久本地文件放入 data/theme/user-assets/ 后填写 local:文件名。"
       },
       {
         "key": "backgroundBlur",

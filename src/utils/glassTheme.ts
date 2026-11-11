@@ -77,27 +77,30 @@ const PRESET_TOKENS: Record<Exclude<GlassColorPreset, 'custom'>, GlassThemeToken
     darkShadow: '0 10px 34px rgb(0 0 0 / 0.58)',
   },
   midnight: {
-    lightCard: '#fff8e7d6',
-    lightCardHover: '#fffaf0eb',
-    lightControl: '#f7edd1d9',
-    lightHeader: '#fff8e7dc',
-    lightText: '#3b211f',
-    lightMutedText: '#77534d',
-    lightBorder: '#8f17234a',
-    lightShadow: '0 14px 36px rgb(143 23 35 / 0.14), 0 4px 18px rgb(255 210 74 / 0.12)',
-    darkCard: '#07101fd6',
-    darkCardHover: '#0d1b30ea',
-    darkControl: '#07101fe0',
-    darkHeader: '#07101fe0',
-    darkText: '#fff8e7',
-    darkMutedText: '#e8d9b8',
-    darkBorder: '#e84a4f59',
-    darkShadow: '0 8px 34px rgb(0 0 0 / 0.56)',
+    lightCard: '#f7fcff85',
+    lightCardHover: '#f7fcff9c',
+    lightControl: '#f7fcffa6',
+    lightHeader: '#f7fcffad',
+    lightText: '#17364c',
+    lightMutedText: '#3a596d',
+    lightBorder: '#ffffffb3',
+    lightShadow: '0 8px 26px rgb(54 115 160 / 0.13)',
+    darkCard: '#24435f9e',
+    darkCardHover: '#294d6bb0',
+    darkControl: '#24435fb3',
+    darkHeader: '#24435fba',
+    darkText: '#f7fcff',
+    darkMutedText: '#e0f0fa',
+    darkBorder: '#d6f2ff73',
+    darkShadow: '0 8px 26px rgb(23 54 76 / 0.18)',
   },
 }
 
 function withHoverAlpha(color: string): string {
-  return color.length === 9 ? `${color.slice(0, 7)}e6` : color
+  if (color.length !== 9)
+    return color
+  const alpha = Math.min(255, Number.parseInt(color.slice(7), 16) + 20)
+  return `${color.slice(0, 7)}${alpha.toString(16).padStart(2, '0')}`
 }
 
 export function buildGlassThemeTokens(preset: GlassColorPreset, customColors: GlassCustomColors): GlassThemeTokens {

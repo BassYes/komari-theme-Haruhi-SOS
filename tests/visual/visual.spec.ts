@@ -318,7 +318,7 @@ test('SOS world map highlights node regions and opens the stage easter egg', asy
 
   await page.locator('[data-gloria-easter-trigger="wedding"]').click()
   await expect(page.getByText('世界を大いに盛り上げるわよ！', { exact: true })).toBeVisible()
-  await expect(page.locator('.gloria-easter__backdrop')).toHaveAttribute('src', '/images/sos/haruhi-bunny-mobile.webp')
+  await expect(page.locator('.gloria-easter__backdrop')).toHaveAttribute('src', '/images/sos/haruhi-youth-mobile.webp')
   await expect(page).toHaveScreenshot('gloria-easter-desktop.png', { fullPage: false })
 })
 
@@ -330,7 +330,7 @@ test('SOS badge opens the daylight easter egg independently', async ({ page }) =
   await page.locator('[data-gloria-easter-trigger="reflection"]').click()
   await expect(page.getByText('ただの人間には興味ありません', { exact: true })).toBeVisible()
   await expect(page.getByText('世界を大いに盛り上げるわよ！', { exact: true })).toHaveCount(0)
-  await expect(page.locator('.gloria-easter__backdrop')).toHaveAttribute('src', '/images/sos/haruhi-bunny-desktop.webp')
+  await expect(page.locator('.gloria-easter__backdrop')).toHaveAttribute('src', '/images/sos/haruhi-youth-desktop.webp')
   await expect(page).toHaveScreenshot('gloria-reflection-easter-desktop.png', { fullPage: false })
 })
 

@@ -183,18 +183,17 @@ onUnmounted(() => {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background-image: url('/images/sos/haruhi-bunny-desktop.webp');
+  background-image: url('/images/sos/haruhi-youth-desktop.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: saturate(0.96) contrast(1.02) brightness(1.03);
+  filter: saturate(1.04) brightness(1.04);
   transform: scale(1.01);
   transform-origin: center;
 }
 
 .dark .default-background {
-  background-image: url('/images/sos/haruhi-bunny-desktop.webp');
-  filter: saturate(0.9) contrast(1.08) brightness(0.56) hue-rotate(8deg);
+  filter: saturate(0.98) brightness(0.9);
 }
 
 .gloria-nebula,
@@ -207,21 +206,19 @@ onUnmounted(() => {
 .gloria-nebula {
   z-index: 2;
   background:
-    radial-gradient(circle at 82% 12%, rgb(255 210 74 / 0.16), transparent 34%),
-    radial-gradient(circle at 8% 62%, rgb(232 74 79 / 0.13), transparent 32%),
-    radial-gradient(circle at 64% 86%, rgb(76 176 190 / 0.09), transparent 32%),
-    linear-gradient(135deg, rgb(255 248 231 / 0.08), rgb(143 23 35 / 0.08));
+    radial-gradient(circle at 82% 12%, rgb(255 237 164 / 0.1), transparent 34%),
+    linear-gradient(135deg, rgb(208 242 255 / 0.08), transparent 68%);
 }
 
 .dark .gloria-nebula {
   background:
-    radial-gradient(circle at 82% 12%, rgb(255 210 74 / 0.18), transparent 32%),
-    linear-gradient(135deg, rgb(7 16 31 / 0.12), rgb(143 23 35 / 0.16));
+    radial-gradient(circle at 82% 12%, rgb(255 237 164 / 0.08), transparent 32%),
+    linear-gradient(135deg, rgb(36 83 119 / 0.12), transparent 68%);
 }
 
 .gloria-stars {
   z-index: 3;
-  opacity: 0.22;
+  opacity: 0.12;
   background-image:
     radial-gradient(circle at 18% 22%, #fff 0 1px, transparent 1.6px),
     radial-gradient(circle at 64% 35%, #ffd24a 0 1px, transparent 1.7px),
@@ -236,7 +233,7 @@ onUnmounted(() => {
 }
 
 .dark .gloria-stars {
-  opacity: 0.32;
+  opacity: 0.16;
 }
 
 @keyframes gloria-star-drift {
@@ -251,10 +248,10 @@ onUnmounted(() => {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgb(247 237 209 / 0.72) 0%,
-    rgb(247 237 209 / 0.54) 38%,
-    rgb(247 237 209 / 0.18) 70%,
-    rgb(247 237 209 / 0.04) 100%
+    rgb(242 250 255 / 0.2) 0%,
+    rgb(242 250 255 / 0.1) 38%,
+    rgb(255 255 255 / 0.02) 70%,
+    transparent 100%
   );
   pointer-events: none;
 }
@@ -262,36 +259,30 @@ onUnmounted(() => {
 .dark .sos-scrim {
   background: linear-gradient(
     90deg,
-    rgb(7 16 31 / 0.78) 0%,
-    rgb(7 16 31 / 0.58) 40%,
-    rgb(7 16 31 / 0.24) 72%,
-    rgb(7 16 31 / 0.08) 100%
+    rgb(34 66 99 / 0.2) 0%,
+    rgb(34 66 99 / 0.14) 40%,
+    rgb(34 66 99 / 0.06) 72%,
+    transparent 100%
   );
 }
 
 @media (max-width: 768px) {
   .default-background {
-    background-image: url('/images/sos/haruhi-bunny-mobile.webp');
+    background-image: url('/images/sos/haruhi-youth-mobile.webp');
     background-position: center top;
     transform: none;
   }
 
   .dark .default-background {
-    background-image: url('/images/sos/haruhi-bunny-mobile.webp');
-    filter: saturate(0.9) contrast(1.08) brightness(0.64);
+    filter: saturate(0.98) brightness(0.9);
   }
 
   .sos-scrim {
-    background: linear-gradient(
-      180deg,
-      rgb(247 237 209 / 0.38) 0%,
-      rgb(247 237 209 / 0.14) 44%,
-      rgb(247 237 209 / 0.64) 100%
-    );
+    background: linear-gradient(180deg, rgb(242 250 255 / 0.12) 0%, transparent 44%, rgb(242 250 255 / 0.18) 100%);
   }
 
   .dark .sos-scrim {
-    background: linear-gradient(180deg, rgb(7 16 31 / 0.18) 0%, rgb(7 16 31 / 0.34) 46%, rgb(7 16 31 / 0.8) 100%);
+    background: linear-gradient(180deg, rgb(34 66 99 / 0.12) 0%, rgb(34 66 99 / 0.06) 46%, rgb(34 66 99 / 0.2) 100%);
   }
 }
 

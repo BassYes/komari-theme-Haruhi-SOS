@@ -12,12 +12,12 @@ const easterVariant = ref<'reflection' | 'wedding'>('wedding')
 let easterTimer: ReturnType<typeof setTimeout> | null = null
 const isReflectionEaster = computed(() => easterVariant.value === 'reflection')
 const easterSource = computed(() => isReflectionEaster.value
-  ? '/images/sos/haruhi-bunny-desktop.webp'
-  : appStore.gloriaHeroUrl || '/images/sos/haruhi-bunny-mobile.webp')
+  ? '/images/sos/haruhi-youth-desktop.webp'
+  : appStore.gloriaHeroUrl || '/images/sos/haruhi-youth-mobile.webp')
 const easterType = computed(() => isReflectionEaster.value ? 'image' : appStore.gloriaHeroUrl ? appStore.gloriaHeroType : 'image')
 const easterAlt = computed(() => isReflectionEaster.value
-  ? '兔女郎凉宫春日夕阳活动室背景'
-  : '兔女郎凉宫春日夜间舞台背景')
+  ? '兔女郎凉宫春日晴天校园祭背景'
+  : '兔女郎凉宫春日青春活动室背景')
 const easterMessage = computed(() => isReflectionEaster.value ? appStore.easterAvatarSlogan : appStore.easterMapSlogan)
 const easterSloganStyle = computed(() => {
   const min = Math.min(appStore.easterSloganMin, appStore.easterSloganMax)
@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
     <Teleport to="body">
       <Transition name="gloria-awakening">
         <button v-if="easterActive" type="button" class="gloria-easter" aria-label="关闭 SOS 团彩蛋" @click="easterActive = false">
-          <video v-if="easterType === 'video'" class="gloria-easter__backdrop" :src="easterSource" poster="/images/sos/haruhi-bunny-mobile.webp" autoplay muted loop playsinline />
+          <video v-if="easterType === 'video'" class="gloria-easter__backdrop" :src="easterSource" poster="/images/sos/haruhi-youth-mobile.webp" autoplay muted loop playsinline />
           <img v-else class="gloria-easter__backdrop" :src="easterSource" :alt="easterAlt">
           <span class="gloria-easter__veil" aria-hidden="true" />
           <span v-for="index in 18" :key="index" class="gloria-easter__star" :style="{ '--star-index': index }" aria-hidden="true">✦</span>
@@ -77,9 +77,11 @@ onBeforeUnmount(() => {
   isolation: isolate;
   min-height: 16.5rem;
   overflow: hidden;
-  border: 1px solid rgb(232 74 79 / 0.3);
+  border: 1px solid rgb(214 242 255 / 0.5);
   border-radius: 1.1rem;
-  background: #07101f;
+  background: rgb(36 67 95 / 0.45);
+  backdrop-filter: blur(5px) saturate(115%);
+  -webkit-backdrop-filter: blur(5px) saturate(115%);
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.06),
     0 18px 48px rgb(0 0 0 / 0.24);
@@ -87,7 +89,7 @@ onBeforeUnmount(() => {
 
 :global(:root:not(.dark) .gloria-stage) {
   border-color: rgb(255 255 255 / 0.88);
-  background: rgb(255 255 255 / 0.76);
+  background: rgb(247 252 255 / 0.38);
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.94),
     0 16px 40px rgb(143 23 35 / 0.16),
@@ -203,13 +205,13 @@ onBeforeUnmount(() => {
 .gloria-easter__backdrop {
   object-fit: cover;
   object-position: center 42%;
-  opacity: 0.43;
+  opacity: 0.88;
   animation: gloria-easter-camera 6.2s ease-out both;
 }
 .gloria-easter__veil {
   background:
-    radial-gradient(circle at 50% 48%, transparent 4%, rgb(7 16 31 / 0.1) 38%, rgb(4 9 20 / 0.82) 100%),
-    linear-gradient(0deg, rgb(4 9 20 / 0.8), transparent 44%, rgb(143 23 35 / 0.18));
+    radial-gradient(circle at 50% 48%, rgb(36 67 95 / 0.1), transparent 72%),
+    linear-gradient(0deg, rgb(36 67 95 / 0.36), transparent 66%);
 }
 .gloria-easter__content {
   --easter-tracking: 0.12em;
@@ -367,7 +369,7 @@ onBeforeUnmount(() => {
   }
   .gloria-easter__backdrop {
     object-position: 78% 46%;
-    opacity: 0.38;
+    opacity: 0.82;
   }
   .gloria-easter__content {
     --easter-tracking: 0.07em;

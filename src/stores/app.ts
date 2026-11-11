@@ -583,16 +583,16 @@ const COLOR_VISION_MODE_ALIASES: Record<string, ColorVisionMode> = {
 }
 
 const DEFAULT_GLASS_CUSTOM_COLORS: GlassCustomColors = {
-  lightCard: '#fff8e7d6',
-  lightControl: '#f7edd1d9',
-  lightText: '#3b211f',
-  lightMutedText: '#77534d',
-  lightBorder: '#8f17234a',
-  darkCard: '#07101fd6',
-  darkControl: '#07101fe0',
-  darkText: '#fff8e7',
-  darkMutedText: '#e8d9b8',
-  darkBorder: '#e84a4f59',
+  lightCard: '#f7fcff85',
+  lightControl: '#f7fcffa6',
+  lightText: '#17364c',
+  lightMutedText: '#3a596d',
+  lightBorder: '#ffffffb3',
+  darkCard: '#24435f9e',
+  darkControl: '#24435fb3',
+  darkText: '#f7fcff',
+  darkMutedText: '#e0f0fa',
+  darkBorder: '#d6f2ff73',
 }
 
 const HEX_COLOR_REGEX = /^#[0-9a-f]{6}(?:[0-9a-f]{2})?$/i
@@ -944,8 +944,8 @@ function parseGlassCustomColors(settings: ThemeSettings): GlassCustomColors {
 
 function parseGlassColorPreset(value: unknown): GlassColorPreset {
   if (typeof value !== 'string')
-    return 'emerald'
-  return GLASS_COLOR_PRESET_ALIASES[value.trim()] ?? 'emerald'
+    return 'midnight'
+  return GLASS_COLOR_PRESET_ALIASES[value.trim()] ?? 'midnight'
 }
 
 function parseColorVisionMode(value: unknown): ColorVisionMode {
@@ -1341,7 +1341,7 @@ const useAppStore = defineStore('app', () => {
 
   const managedThemeMode = computed<ManagedThemeMode>(() => {
     const value = themeSettings.value.themeMode
-    return isValidManagedThemeMode(value) ? value : 'beijing'
+    return isValidManagedThemeMode(value) ? value : 'light'
   })
 
   const isBeijingDaytime = computed<boolean>(() => {

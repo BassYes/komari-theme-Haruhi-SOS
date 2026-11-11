@@ -249,9 +249,8 @@ onMounted(async () => {
   inset: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 28%, rgb(232 74 79 / 0.3), transparent 34%),
-    radial-gradient(circle at 18% 72%, rgb(76 176 190 / 0.18), transparent 32%),
-    linear-gradient(145deg, #0d1b30 0%, #07101f 48%, #291627 100%);
+    radial-gradient(circle at 78% 28%, rgb(255 218 125 / 0.16), transparent 34%),
+    linear-gradient(145deg, rgb(58 112 149 / 0.24), rgb(52 97 137 / 0.18));
 }
 
 .gloria-world-map::before {
@@ -301,9 +300,9 @@ onMounted(async () => {
 }
 
 .gloria-world-map__countries path {
-  fill: rgb(232 74 79 / 0.14);
+  fill: rgb(159 223 255 / 0.22);
   fill-rule: evenodd;
-  stroke: rgb(255 210 74 / 0.56);
+  stroke: rgb(214 242 255 / 0.76);
   stroke-linejoin: round;
   stroke-width: 0.78;
   transition:
@@ -393,9 +392,8 @@ onMounted(async () => {
 
 :global(:root:not(.dark) .gloria-world-map) {
   background:
-    radial-gradient(circle at 76% 30%, rgb(232 74 79 / 0.24), transparent 36%),
-    radial-gradient(circle at 18% 74%, rgb(76 176 190 / 0.2), transparent 34%),
-    linear-gradient(145deg, rgb(255 248 231 / 0.84), rgb(247 237 209 / 0.76) 54%, rgb(225 244 244 / 0.72));
+    radial-gradient(circle at 76% 30%, rgb(255 226 143 / 0.16), transparent 36%),
+    linear-gradient(145deg, rgb(222 246 255 / 0.36), rgb(247 252 255 / 0.2));
 }
 
 :global(:root:not(.dark) .gloria-world-map::before) {
@@ -418,8 +416,8 @@ onMounted(async () => {
 }
 
 :global(:root:not(.dark) .gloria-world-map__countries path) {
-  fill: rgb(232 74 79 / 0.16);
-  stroke: rgb(143 23 35 / 0.45);
+  fill: rgb(62 158 204 / 0.2);
+  stroke: rgb(35 111 159 / 0.6);
 }
 
 :global(:root:not(.dark) .gloria-world-map__countries path.is-active) {

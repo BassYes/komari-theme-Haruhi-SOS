@@ -2,10 +2,14 @@
 
 一套以经典日漫《凉宫春日的忧郁》与 SOS 团活动室为视觉主题的 Komari Monitor 前端。工程基于 `komari-theme-Bocchi` 的完整监控能力重新设计，保留节点卡片、列表、世界地图、详情图表、管理员工具、权限校验、移动端布局和 Komari 主题 zip 打包。
 
+![青春校园祭与透明服务器卡面预览](docs/preview.png)
+
 ## 视觉特色
 
-- SOS 团袖章红、活动室纸张米色、夜间观测蓝三套核心色。
-- 内置兔女郎凉宫春日桌面横图和手机竖图；桌面以夕阳活动室为背景，手机以夜间小舞台为背景。
+- 晴空蓝、暖白、柠檬黄与 SOS 团袖章红，表现晴天校园祭的轻快青春感。
+- 内置晴天兔女郎凉宫春日桌面横图和手机竖图：蓝天白云、飘动窗帘、彩色拉旗和洒满阳光的活动室。
+- 服务器卡片使用单层透明玻璃：明亮模式约 52% 不透明度，夜间约 62%，5px 轻磨砂，能透出下方人物与活动室轮廓；悬停依然透底。
+- 默认使用明亮模式，夜间为通透的蓝色玻璃，保留背景亮度。已有站点若仍为夜间，可在右上角切到明亮，或在后台将默认主题模式设为 `light`。
 - 独立 SOS 六边形徽记，用于页签图标、站点头像、节点在线状态和地图彩蛋。
 - 节点随机显示《God knows...》《ハレ晴レユカイ》《冒険でしょでしょ？》等系列曲目标签。
 - 点击左上角 SOS 徽章或地图右上角 `SOS` 信号按钮可打开两种全屏彩蛋。
@@ -70,8 +74,8 @@ HTTP 与 WebSocket RPC 默认使用 `/api/rpc2`，无需额外 `.env` 文件。�
 ## 内置素材
 
 ```text
-public/images/sos/haruhi-bunny-desktop.webp
-public/images/sos/haruhi-bunny-mobile.webp
+public/images/sos/haruhi-youth-desktop.webp
+public/images/sos/haruhi-youth-mobile.webp
 public/images/sos/sos-badge.svg
 ```
 
