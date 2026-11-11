@@ -2,7 +2,7 @@
   "name": "Haruhi SOS",
   "short": "haruhi-sos",
   "description": "凉宫春日 SOS 团青春校园祭主题：晴空蓝、暖白与团长红，透明磨砂服务器卡面、晴天兔女郎春日背景与系列曲目标签",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Bass",
   "url": "https://github.com/BassYes/komari-theme-Haruhi-SOS",
   "preview": "preview.png",
@@ -218,7 +218,7 @@
         "type": "select",
         "default": "SOS团",
         "options": "翡翠,柔和,高对比,SOS团,自定义",
-        "help": "推荐“SOS团”：明亮模式约 52% 不透明度、夜间模式约 62%，低模糊磨砂透出背景。预设名称不代表主题模式；选择“自定义”可用下方 JSON 调整颜色与透明度。"
+        "help": "推荐“SOS团”：明亮模式约 72% 不透明度、夜间模式约 78%，保留适量背景透视。地图采用约 90% 不透明度并强化轮廓。选择“自定义”可用下方 JSON 调整卡片颜色与透明度。"
       },
       {
         "key": "colorVisionMode",
@@ -232,7 +232,7 @@
         "key": "glassCustomColors",
         "name": "自定义明亮/夜里玻璃 JSON",
         "type": "richtext",
-        "default": "{\"lightCard\":\"#f7fcff85\",\"lightControl\":\"#f7fcffa6\",\"lightText\":\"#17364c\",\"lightMutedText\":\"#3a596d\",\"lightBorder\":\"#ffffffb3\",\"darkCard\":\"#24435f9e\",\"darkControl\":\"#24435fb3\",\"darkText\":\"#f7fcff\",\"darkMutedText\":\"#e0f0fa\",\"darkBorder\":\"#d6f2ff73\"}",
+        "default": "{\"lightCard\":\"#f7fcffb8\",\"lightControl\":\"#f7fcffc7\",\"lightText\":\"#17364c\",\"lightMutedText\":\"#3a596d\",\"lightBorder\":\"#ffffffb3\",\"darkCard\":\"#24435fc7\",\"darkControl\":\"#24435fd1\",\"darkText\":\"#f7fcff\",\"darkMutedText\":\"#e0f0fa\",\"darkBorder\":\"#d6f2ff73\"}",
         "help": "light*=明亮模式，dark*=夜里模式；Card=卡片，Control=控制条，Text=主文字，MutedText=次文字，Border=边框。支持 #RRGGBB 和带透明度的 #RRGGBBAA。"
       },
       {

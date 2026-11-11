@@ -583,13 +583,13 @@ const COLOR_VISION_MODE_ALIASES: Record<string, ColorVisionMode> = {
 }
 
 const DEFAULT_GLASS_CUSTOM_COLORS: GlassCustomColors = {
-  lightCard: '#f7fcff85',
-  lightControl: '#f7fcffa6',
+  lightCard: '#f7fcffb8',
+  lightControl: '#f7fcffc7',
   lightText: '#17364c',
   lightMutedText: '#3a596d',
   lightBorder: '#ffffffb3',
-  darkCard: '#24435f9e',
-  darkControl: '#24435fb3',
+  darkCard: '#24435fc7',
+  darkControl: '#24435fd1',
   darkText: '#f7fcff',
   darkMutedText: '#e0f0fa',
   darkBorder: '#d6f2ff73',

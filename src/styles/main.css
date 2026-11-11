@@ -93,7 +93,7 @@
 :root {
   --background: #eaf6ff;
   --foreground: #17364c;
-  --card: #f7fcff85;
+  --card: #f7fcffb8;
   --card-foreground: #17364c;
   --popover: #f7fcfff5;
   --popover-foreground: #17364c;
@@ -127,7 +127,7 @@
 .dark {
   --background: #24435f;
   --foreground: #f7fcff;
-  --card: #24435f9e;
+  --card: #24435fc7;
   --card-foreground: #f7fcff;
   --popover: #24435ff5;
   --popover-foreground: #f7fcff;
@@ -368,7 +368,7 @@ html.legacy-webkit [data-slot='card'] {
 .bg-card,
 [data-slot='card'] {
   /* One translucent paint layer: do not stack opaque gradients over the wallpaper. */
-  background: var(--glass-light-card, rgb(247 252 255 / 0.52)) !important;
+  background: var(--glass-light-card, rgb(247 252 255 / 0.72)) !important;
   border: 1px solid var(--glass-light-border, rgb(226 232 240 / 0.68)) !important;
   backdrop-filter: blur(5px) saturate(115%) !important;
   -webkit-backdrop-filter: blur(5px) saturate(115%) !important;
@@ -378,7 +378,7 @@ html.legacy-webkit [data-slot='card'] {
 :root:not(.dark) .node-card,
 :root:not(.dark) .bg-card,
 :root:not(.dark) [data-slot='card'] {
-  background: var(--glass-light-card, rgb(247 252 255 / 0.52)) !important;
+  background: var(--glass-light-card, rgb(247 252 255 / 0.72)) !important;
 }
 
 .node-card:hover,
@@ -393,7 +393,7 @@ html.legacy-webkit [data-slot='card'] {
 .dark .node-card,
 .dark .bg-card,
 .dark [data-slot='card'] {
-  background: var(--glass-dark-card, rgb(36 67 95 / 0.62)) !important;
+  background: var(--glass-dark-card, rgb(36 67 95 / 0.78)) !important;
   border: 1px solid var(--glass-dark-border, rgb(255 255 255 / 0.18)) !important;
   box-shadow: var(--glass-dark-shadow, 0 8px 30px rgb(0 0 0 / 0.48)) !important;
 }
@@ -552,25 +552,25 @@ header {
 
 .gloria-header {
   border-color: rgb(214 242 255 / 0.4) !important;
-  background: rgb(36 67 95 / 0.58);
+  background: rgb(36 67 95 / 0.78);
 }
 
 .gloria-header--scrolled {
   border-color: rgb(214 242 255 / 0.5) !important;
-  background: rgb(36 67 95 / 0.76) !important;
+  background: rgb(36 67 95 / 0.88) !important;
   box-shadow: 0 8px 30px rgb(23 54 76 / 0.12);
 }
 
 :root:not(.dark) .gloria-header {
   border-color: rgb(255 255 255 / 0.64) !important;
-  background: rgb(247 252 255 / 0.58) !important;
+  background: rgb(247 252 255 / 0.78) !important;
   color: #17364c;
   box-shadow: 0 6px 24px rgb(54 115 160 / 0.08);
 }
 
 :root:not(.dark) .gloria-header--scrolled {
   border-color: rgb(255 255 255 / 0.72) !important;
-  background: rgb(247 252 255 / 0.8) !important;
+  background: rgb(247 252 255 / 0.88) !important;
   box-shadow: 0 8px 26px rgb(54 115 160 / 0.12);
 }
 
@@ -622,7 +622,7 @@ header {
 .gloria-stat-card,
 .node-card {
   border: 1px solid var(--glass-dark-border, rgb(214 242 255 / 0.45)) !important;
-  background: var(--glass-dark-card, rgb(36 67 95 / 0.62)) !important;
+  background: var(--glass-dark-card, rgb(36 67 95 / 0.78)) !important;
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.2),
     var(--glass-dark-shadow, 0 8px 26px rgb(23 54 76 / 0.18)) !important;
@@ -646,7 +646,7 @@ header {
 .gloria-stat-card:hover,
 .node-card:hover {
   border-color: rgb(214 242 255 / 0.7) !important;
-  background: var(--glass-dark-card-hover, rgb(41 77 107 / 0.69)) !important;
+  background: var(--glass-dark-card-hover, rgb(41 77 107 / 0.84)) !important;
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.28),
     0 10px 30px rgb(54 115 160 / 0.2) !important;
@@ -661,7 +661,7 @@ header {
 :root:not(.dark) .gloria-stat-card,
 :root:not(.dark) .node-card {
   border-color: var(--glass-light-border, rgb(255 255 255 / 0.8)) !important;
-  background: var(--glass-light-card, rgb(247 252 255 / 0.52)) !important;
+  background: var(--glass-light-card, rgb(247 252 255 / 0.72)) !important;
   color: var(--glass-light-text, #17364c) !important;
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.9),
@@ -677,7 +677,7 @@ header {
 :root:not(.dark) .gloria-stat-card:hover,
 :root:not(.dark) .node-card:hover {
   border-color: rgb(255 255 255 / 0.92) !important;
-  background: var(--glass-light-card-hover, rgb(247 252 255 / 0.61)) !important;
+  background: var(--glass-light-card-hover, rgb(247 252 255 / 0.8)) !important;
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.96),
     0 12px 30px rgb(54 115 160 / 0.18) !important;

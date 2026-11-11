@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
   border: 1px solid rgb(214 242 255 / 0.5);
   border-radius: 1.1rem;
-  background: rgb(36 67 95 / 0.45);
+  background: rgb(36 67 95 / 0.88);
   backdrop-filter: blur(5px) saturate(115%);
   -webkit-backdrop-filter: blur(5px) saturate(115%);
   box-shadow:
@@ -89,7 +89,7 @@ onBeforeUnmount(() => {
 
 :global(:root:not(.dark) .gloria-stage) {
   border-color: rgb(255 255 255 / 0.88);
-  background: rgb(247 252 255 / 0.38);
+  background: rgb(239 249 255 / 0.9);
   box-shadow:
     inset 0 1px rgb(255 255 255 / 0.94),
     0 16px 40px rgb(143 23 35 / 0.16),

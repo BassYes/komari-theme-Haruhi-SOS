@@ -221,8 +221,8 @@ onMounted(async () => {
           @blur="clearMarker"
         >
           <circle class="gloria-world-map__pulse" r="13" />
-          <circle class="gloria-world-map__halo" r="8" />
-          <circle class="gloria-world-map__dot" r="4.2" />
+          <circle class="gloria-world-map__halo" r="8.5" />
+          <circle class="gloria-world-map__dot" r="5" />
         </g>
       </g>
     </svg>
@@ -249,8 +249,8 @@ onMounted(async () => {
   inset: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 28%, rgb(255 218 125 / 0.16), transparent 34%),
-    linear-gradient(145deg, rgb(58 112 149 / 0.24), rgb(52 97 137 / 0.18));
+    radial-gradient(circle at 78% 28%, rgb(255 218 125 / 0.06), transparent 34%),
+    linear-gradient(145deg, rgb(58 112 149 / 0.06), rgb(52 97 137 / 0.04));
 }
 
 .gloria-world-map::before {
@@ -300,11 +300,11 @@ onMounted(async () => {
 }
 
 .gloria-world-map__countries path {
-  fill: rgb(159 223 255 / 0.22);
+  fill: rgb(159 223 255 / 0.3);
   fill-rule: evenodd;
-  stroke: rgb(214 242 255 / 0.76);
+  stroke: rgb(214 242 255 / 0.9);
   stroke-linejoin: round;
-  stroke-width: 0.78;
+  stroke-width: 1.05;
   transition:
     fill 180ms ease,
     stroke 180ms ease,
@@ -337,7 +337,7 @@ onMounted(async () => {
 .gloria-world-map__dot {
   fill: #fff2b2;
   stroke: #f05b60;
-  stroke-width: 1.5;
+  stroke-width: 1.8;
   filter: url(#gloria-marker-glow);
 }
 .gloria-world-map__marker.is-active .gloria-world-map__halo {
@@ -392,8 +392,8 @@ onMounted(async () => {
 
 :global(:root:not(.dark) .gloria-world-map) {
   background:
-    radial-gradient(circle at 76% 30%, rgb(255 226 143 / 0.16), transparent 36%),
-    linear-gradient(145deg, rgb(222 246 255 / 0.36), rgb(247 252 255 / 0.2));
+    radial-gradient(circle at 76% 30%, rgb(255 226 143 / 0.06), transparent 36%),
+    linear-gradient(145deg, rgb(222 246 255 / 0.06), rgb(247 252 255 / 0.04));
 }
 
 :global(:root:not(.dark) .gloria-world-map::before) {
@@ -416,8 +416,14 @@ onMounted(async () => {
 }
 
 :global(:root:not(.dark) .gloria-world-map__countries path) {
-  fill: rgb(62 158 204 / 0.2);
-  stroke: rgb(35 111 159 / 0.6);
+  fill: rgb(62 158 204 / 0.34);
+  stroke: rgb(35 111 159 / 0.88);
+}
+
+:global(:root:not(.dark) .gloria-world-map__dot) {
+  fill: #e74855;
+  stroke: #ffffff;
+  stroke-width: 2;
 }
 
 :global(:root:not(.dark) .gloria-world-map__countries path.is-active) {
